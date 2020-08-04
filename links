@@ -1,1 +1,3 @@
+etc/tmux/tmux.conf	~/.tmux.conf
+etc/zsh/zshrc	~/.zshrc
 etc/nvim	~/.config/nvim
