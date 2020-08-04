@@ -6,8 +6,9 @@ set smarttab
 
 " {{{1 Line flow
 set linebreak
-
 set conceallevel=2
+set textwidth=120
+set colorcolumn=120
 
 " {{{1 Table mode
 

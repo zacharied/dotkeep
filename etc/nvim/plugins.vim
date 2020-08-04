@@ -23,7 +23,11 @@ Plug 'mgee/lightline-bufferline'
 
 " {{{1 Language
 
-"Plug 'neoclide/coc.nvim', {'branch': 'release'}
+if has('nvim-0.4.3')
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}
+else
+    echom 'neovim is outdated, coc will not be used'
+endif
 
 " Rust
 Plug 'rust-lang/rust.vim'
