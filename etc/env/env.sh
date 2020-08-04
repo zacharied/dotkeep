@@ -6,6 +6,9 @@ export DOT=~/.dotkeep-link
 
 export PATH=$HOME/bin:$PATH
 
+eval $(dircolors)
+alias ls='ls --color=auto'
+
 # }}}1
 
 # vim: fdm=marker:

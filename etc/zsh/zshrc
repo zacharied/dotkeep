@@ -41,11 +41,6 @@ export PROMPT=\
 '%(?.正.%F{red}不 %?%f) %F{blue}%n@%m%f %B%F{green}%122<...<%~
 %h%{%}%F{white} %# %b%f%k'
 
-# {{{1 Commands
-
-eval $(dircolors)
-alias ls='ls --color=auto'
-
 # {{{1 System
 
 export TERM=xterm
