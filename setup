@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Configures settings for the repository.
+# Note that this does not restore the links. Invoke dotkeeper manually for that.
+
+git config core.hooksPath .repo/hooks
+
+touch .setup-done

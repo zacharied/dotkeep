@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+cd ~/.dotkeep-link || exit 1
+
+if ! hash dotkeeper; then
+    echo "no dotkeeper binary found" >&2
+    exit 1
+fi
+
+file=$(mktemp /tmp/githook.XXXXX)
+
+dotkeeper --links-file "$file" save &>/dev/null
+
+if ! diff "$file" "./links" &>/dev/null; then
+    echo "links file is outdated"
+    exit 1
+fi
+
+git add links
