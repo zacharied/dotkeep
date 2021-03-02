@@ -2,9 +2,11 @@
 
 " Download vim-plug if it hasn't been already.
 let g:vim_plug_location = expand('~/.local/share/nvim/site/autoload/plug.vim')
+let g:vim_plug_first_run = 0
 if !filereadable(g:vim_plug_location)
     echom 'Installing vim-plug at "' . g:vim_plug_location . '".'
     call system('curl -fLo ' . g:vim_plug_location . ' --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim')
+    let g:vim_plug_first_run = 1
 endif
 
 call plug#begin('~/.local/share/vim-plug')
@@ -135,6 +137,10 @@ augroup END
 " {{{1 Closing
 
 call plug#end()
+
+if g:vim_plug_first_run == 1
+    PlugInstall
+endif
 
 " }}}1
 
